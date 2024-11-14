@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Function to get device serial number, manufacturer, and model
 get_hardware_info() {
@@ -15,17 +14,6 @@ get_os_info() {
 # Function to get firewall status
 get_firewall_status() {
     firewallStatus=$(/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate)
-}
-
-# Function to get antivirus status (for macOS only)
-get_antivirus_status() {
-    if command -v /usr/local/bin/sophos-av/bin/savdstatus &> /dev/null; then
-        antivirusStatus="Sophos Antivirus is installed."
-    elif command -v /opt/BitDefender-scanner/bin/bdscan &> /dev/null; then
-        antivirusStatus="Bitdefender is installed."
-    else
-        antivirusStatus="No third-party antivirus software found."
-    fi
 }
 
 # Function to get encryption status
