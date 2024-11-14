@@ -30,7 +30,6 @@ get_network_encryption_type() {
 get_hardware_info
 get_os_info
 get_firewall_status
-get_antivirus_status
 get_encryption_status
 get_network_encryption_type
 
@@ -40,9 +39,6 @@ results="Serial Number: $serialNumber
 Operating System: $osInfo
 
 Firewall Status: $firewallStatus
-
-Antivirus Status:
-$antivirusStatus
 
 Encryption Status: $encryptionStatus
 
